@@ -88,6 +88,19 @@ body{
     width: 90%;
 }
 
+.input-wrapper [type='email']::placeholder {
+    color: var(--Desaturated-Red);
+    opacity: 1; /* Firefox */
+  }
+  
+  .input-wrapper [type='email']:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: var(--Desaturated-Red);
+  }
+  
+  .input-wrapper [type='email']::-ms-input-placeholder { /* Microsoft Edge */
+   color: var(--Desaturated-Red);
+  }
+
 .input-wrapper--invalid [type='email']{
     border-width: 0.12em;
 }
@@ -166,7 +179,7 @@ body{
     }
 
     .content-section__title-text{
-        font-size: 4.8rem;
+        font-size: 5.8rem;
     }
     .content-section__body-text{
         padding: 0;
