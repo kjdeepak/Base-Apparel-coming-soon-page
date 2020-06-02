@@ -1,4 +1,5 @@
-function onSubscriptionFormSubmit() {
+function onSubscriptionFormSubmit($e) {
+    $e.preventDefault();
     const emailInput = document.getElementById('email');
     const inputWrapper = document.getElementById('input-wrapper');
     const errorPrompt = document.getElementsByClassName('error-prompt');

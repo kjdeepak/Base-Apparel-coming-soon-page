@@ -39,10 +39,10 @@
           Add your email below to stay up-to-date with announcements and our launch deals.</p>
         <form method="GET" action="#" id="subscription-form" class="subscription-form subscription-form--desktop">
           <div id="input-wrapper" class="input-wrapper input-wrapper--desktop">
-            <input id="email" type="email" name="email" placeholder="Email Address">
+            <input id="email" type="email" name="email" aria-label="email" placeholder="Email Address">
             <div class="input-post-pend input-post-pend--desktop">
               <img class="error-prompt" src="./images/icon-error.svg" alt="error-icon-for-invalid-email">
-              <button type="button" onclick="onSubscriptionFormSubmit()">
+              <button type="submit" onclick="onSubscriptionFormSubmit(event)">
                 <img src="./images/icon-arrow.svg" alt="arrow-icon-for-button">
               </button>
             </div>
@@ -65,7 +65,7 @@
     </p>
   </footer>
 
-  <script type="text/javascript" src="./scripts/script.js"></script>
+  <script src="./scripts/script.js"></script>
 </body>
 
 </html>
