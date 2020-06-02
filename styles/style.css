@@ -86,6 +86,7 @@ body{
     border-width: thin;
     outline: none;
     width: 90%;
+    background-color: transparent;
 }
 
 .input-wrapper [type='email']::placeholder {
