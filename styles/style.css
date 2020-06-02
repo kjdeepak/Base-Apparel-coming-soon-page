@@ -1,0 +1,191 @@
+@import './normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root{
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    /* --Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%); */
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.6rem;
+}
+
+.container__left{
+    background: linear-gradient(135deg, hsl(0, 0%, 100%),  hsl(0, 100%, 98%));
+}
+.container__right{
+    display: none;
+}
+
+.brand-logo{
+    padding: 2em;
+}
+
+.jumbotron{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.jumbotron--desktop{
+    display: none;
+}
+
+.content-section{
+    margin-top: 3em;
+    text-align: center;
+    padding-bottom: 3em;
+}
+
+.content-section__title-text{
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    line-height: 1.2em;
+    text-transform: uppercase;
+}
+
+.content-section__title-text > span{
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+}
+
+.content-section__body-text{
+    color: var(--Desaturated-Red);
+    font-weight: 400;
+    margin-bottom: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.subscription-form{
+    width: 90%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-wrapper{
+    position: relative;
+    margin-bottom: 0.5em;
+}
+
+
+.input-wrapper [type='email']{
+    padding: 0.97em;
+    border-color: var(--Desaturated-Red);
+    border-radius: 5em;
+    border-style: solid;
+    border-width: thin;
+    outline: none;
+    width: 90%;
+}
+
+.input-wrapper--invalid [type='email']{
+    border-width: 0.12em;
+}
+
+.input-post-pend{
+    position: absolute;
+    right: -0.6em;
+    bottom: 0;
+    top: 0;
+}
+
+.input-wrapper [type='button']{
+    padding: 0.83em;
+    padding-left: 2.2em;
+    padding-right: 2.2em;
+    border: none;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border-radius: 5em;
+    color: #ffffff;
+    outline: none;
+
+}
+
+.input-wrapper [type='button']:hover{
+    background: none;
+    background-color: hsl(0, 80%, 86%);
+    box-shadow: 0px 15px 10px -1px hsl(0, 36%, 70%);
+    cursor: pointer;
+}
+
+.error-prompt{
+    display: none;
+}
+.error-message{
+    padding-left: 1.2em;
+    color: var(--Soft-Red);
+}
+
+@media(min-width: 376px){
+    .container{
+        display: flex;
+    }
+    .container__left{
+        padding-top: 0;
+        padding-left: 12em;
+        padding-right: 12em;
+        background: linear-gradient(135deg, hsl(0, 0%, 100%),  hsl(0, 100%, 98%));
+    }
+
+    .container__right--desktop{
+        display: block;  
+    }
+
+    .brand-logo--desktop{
+        padding: 0;
+        padding-top: 3em;
+        margin-bottom: 5em;
+    }
+    
+    .jumbotron-mobile{
+        display: none;
+    }
+
+    .jumbotron--desktop{
+        display: block;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .content-section--desktop{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        background: none;
+    }
+
+    .content-section__title-text{
+        font-size: 4.8rem;
+    }
+    .content-section__body-text{
+        padding: 0;
+        line-height: 1.4em;
+    }
+
+    .subscription-form--desktop{
+        width: 100%;
+    }
+    .input-wrapper [type='email']{
+        padding: 1.3em;
+    }
+
+    .input-post-pend--desktop{
+        right: -1em;
+    }
+    .input-wrapper--desktop [type='button']{
+        padding: 1.175em;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+}
