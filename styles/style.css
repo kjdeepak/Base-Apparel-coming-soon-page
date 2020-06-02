@@ -48,7 +48,7 @@ body{
 .content-section__title-text{
     font-weight: 600;
     letter-spacing: 0.25em;
-    line-height: 1.2em;
+    line-height: 1.2;
     text-transform: uppercase;
 }
 
@@ -63,6 +63,7 @@ body{
     margin-bottom: 3em;
     padding-left: 2em;
     padding-right: 2em;
+    line-height: 1.5;
 }
 
 .subscription-form{
@@ -134,13 +135,24 @@ body{
 
 .error-prompt{
     display: none;
+    vertical-align: sub;
 }
 .error-message{
     padding-left: 1.2em;
     color: var(--Soft-Red);
 }
 
-@media(min-width: 376px){
+@media(min-width:376px){
+    .jumbotron-mobile{
+        display: block;
+        height: 55vh;
+    }
+    .jumbotron-mobile img{
+        width: 100%;
+    }
+}
+
+@media(min-width: 769px){
     .container{
         display: flex;
     }
@@ -148,7 +160,10 @@ body{
         padding-top: 0;
         padding-left: 12em;
         padding-right: 12em;
-        background: linear-gradient(135deg, hsl(0, 0%, 100%),  hsl(0, 100%, 98%));
+        background-repeat: no-repeat;
+        background-image: url('../images/bg-pattern-desktop.svg');
+        background-size: cover;
+        background-position: right top;
     }
 
     .container__right--desktop{
@@ -157,7 +172,7 @@ body{
 
     .brand-logo--desktop{
         padding: 0;
-        padding-top: 3em;
+        padding-top: 4em;
         margin-bottom: 5em;
     }
     
@@ -184,7 +199,6 @@ body{
     }
     .content-section__body-text{
         padding: 0;
-        line-height: 1.4em;
     }
 
     .subscription-form--desktop{
